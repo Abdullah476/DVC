@@ -12,7 +12,7 @@ jobs:
               run: |
                   make install 
                   dvc remote modify myremote gdrive_use_service_account true
-                  dvc pull data_processed.csv
+                  dvc pull data.csv
                   dvc repro
                   git fetch --prune
                   dvc metrics diff --show-md main > report.md
